@@ -1,5 +1,5 @@
 .review-card{
-    width: 32rem;
+    max-width: 32rem;
 }
 .review-card-img{
     height: 100px;

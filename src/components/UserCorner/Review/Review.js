@@ -17,7 +17,7 @@ const Review = () => {
             Description: data.Description,
             Date: (new Date().getUTCDate()) + "-" + (new Date().getMonth() + 1) + "-" + (new Date().getUTCFullYear())
         };
-        const url = `http://localhost:5000/addReview`
+        const url = `https://polar-bastion-39307.herokuapp.com/addReview`
         // console.log(data)
 
         console.log(reviewData);

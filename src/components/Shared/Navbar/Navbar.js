@@ -23,10 +23,10 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
                         <Link to="/home" class="nav-link active" aria-current="page">HOME</Link>
-                        <Link to="/about" class="nav-link">ABOUT</Link>
+                        {/* <Link to="/about" class="nav-link">ABOUT</Link> */}
                         <Link to="/order" class="nav-link">ORDER</Link>
                         <Link to="/admin" class="nav-link">ADMIN</Link>
-                        <Link to="/contact" class="nav-link">CONTACT</Link>
+                        {/* <Link to="/contact" class="nav-link">CONTACT</Link> */}
                         {/* <Link to="/login" class="nav-link">LOGIN</Link> */}
                         {
                             loggedInUser.email ? <Link className="nav-link" id="user-name">{loggedInUser.name}</Link> : <Link to="/login" className="nav-link btn btn-info px-5">LOG IN</Link>

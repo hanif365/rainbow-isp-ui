@@ -32,7 +32,7 @@ const Order = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${serviceId}`)
+        fetch(`https://polar-bastion-39307.herokuapp.com/service/${serviceId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data[0])
@@ -61,7 +61,7 @@ const Order = () => {
             orderTime: moment().format('MMMM Do YYYY, h:mm:ss a')
         };
 
-        const url = `http://localhost:5000/addOrder`
+        const url = `https://polar-bastion-39307.herokuapp.com/addOrder`
 
         fetch(url, {
             method: 'POST',
@@ -107,21 +107,21 @@ const Order = () => {
 
 // test code
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/orders`)
+    //     fetch(`https://polar-bastion-39307.herokuapp.com/orders`)
     //         .then(res => res.json())
     //         .then(data => setOrders(data))
     // }, [])
 
     // working code
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/orders?email=`+loggedInUser.email)
+    //     fetch(`https://polar-bastion-39307.herokuapp.com/orders?email=`+loggedInUser.email)
     //         .then(res => res.json())
     //         .then(data => setOrders(data))
     // }, [])
 
     // test code
     useEffect(() => {
-        fetch(`http://localhost:5000/booking?email=`+loggedInUser.email)
+        fetch(`https://polar-bastion-39307.herokuapp.com/booking?email=`+loggedInUser.email)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])

@@ -6,7 +6,7 @@ const Service = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://polar-bastion-39307.herokuapp.com/services')
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -14,7 +14,7 @@ const Service = () => {
         })
     },[])
     return (
-        <div className="container py-5">
+        <div className="container py-5" id="service">
             <h1 className="text-center pb-5">Service</h1>
             <div className="d-flex justify-content-center flex-wrap pt-2">
                 {

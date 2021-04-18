@@ -3,8 +3,6 @@ import './Admin.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import ManageServices from '../ManageServices/ManageServices';
-import OrderDetails from '../OrderDetails/OrderDetails';
 import Navbar from '../../Shared/Navbar/Navbar';
 import { UserContext } from '../../../App';
 
@@ -30,7 +28,7 @@ const Admin = () => {
             Service_Description: data.Service_Description,
             Service_Added_date: (new Date().getUTCDate()) + "-" + (new Date().getMonth() + 1) + "-" + (new Date().getUTCFullYear())
         };
-        const url = `http://localhost:5000/addService`
+        const url = `https://polar-bastion-39307.herokuapp.com/addService`
         // console.log(data)
 
         console.log(serviceData);
@@ -58,7 +56,7 @@ const Admin = () => {
             Admin_Added_Date: (new Date().getUTCDate()) + "-" + (new Date().getMonth() + 1) + "-" + (new Date().getUTCFullYear())
         };
 
-        const adminURL = `http://localhost:5000/addAdmin`
+        const adminURL = `https://polar-bastion-39307.herokuapp.com/addAdmin`
 
         // console.log(adminData);
 
@@ -99,7 +97,7 @@ const Admin = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://polar-bastion-39307.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -110,7 +108,7 @@ const Admin = () => {
 
     // working old code not necessary now
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/orders`)
+    //     fetch(`https://polar-bastion-39307.herokuapp.com/orders`)
     //         .then(res => res.json())
     //         .then(data => {
     //             console.log(data);
@@ -120,7 +118,7 @@ const Admin = () => {
 
     // working code
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=`+loggedInUser.email)
+        fetch(`https://polar-bastion-39307.herokuapp.com/orders?email=`+loggedInUser.email)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -131,7 +129,7 @@ const Admin = () => {
 
     const deleteService = (id) => {
         // console.log(id);
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://polar-bastion-39307.herokuapp.com/delete/${id}`, {
             method: 'DELETE',
         })
             .then(res => {

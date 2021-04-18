@@ -1,0 +1,11 @@
+.header-container{
+    height: 550px;
+    background: url('../../../images/bg-header.png');
+    background-color: rgb(215, 248, 250);
+}
+.main-content{
+    /* background: url('../../../images/bg-header.png'); */
+}
+.header-img{
+    border-radius: 10px;
+}

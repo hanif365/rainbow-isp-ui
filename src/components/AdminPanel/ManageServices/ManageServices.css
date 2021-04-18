@@ -1,0 +1,9 @@
+.manage-service img{
+    width: 50px;
+}
+
+.service-content{
+   margin: 20px;
+    /* padding: 10px; */
+    border-bottom: 2px solid olivedrab;
+}

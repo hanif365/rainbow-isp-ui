@@ -1,0 +1,12 @@
+.link a{
+    list-style: none;
+    text-decoration: none;
+
+}
+.footer-container{
+    background-color: aquamarine;
+}
+.footer-logo{
+    width: 60px;
+    height: 60px;
+}

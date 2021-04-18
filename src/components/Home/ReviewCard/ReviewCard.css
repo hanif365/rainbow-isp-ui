@@ -1,0 +1,9 @@
+.review-card{
+    width: 27rem;
+}
+.review-card-img{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+    border-radius: 50px;
+}

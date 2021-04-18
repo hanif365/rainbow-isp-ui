@@ -1,0 +1,13 @@
+.service-card{
+    max-width: 500px;
+    /* height: 250px; */
+}
+.service-card-img{
+    width: 200px;
+    height: 200px;
+}
+.service-card:hover .service-info{
+    color: #fff;
+    background-color: aquamarine;
+    /* border-radius: 20px 0 0 20px; */
+}

@@ -14,12 +14,15 @@ const ReviewHome = () => {
             })
     }, [])
     return (
-        <div className="container py-5">
-            <h1 className="text-center pb-5">Testimonial</h1>
-            <div className="d-flex justify-content-center flex-wrap pt-2">
-                {
-                    reviews.map(review => <ReviewCard review={review}></ReviewCard>)
-                }
+        <div className="review-container">
+            <div className="container py-5 ">
+                <h4 className="text-center pb-2">Rainbow ISP <span className="text-colorful">Testimonial</span></h4>
+                <h2 className="text-center">What Our Clients Say</h2>
+                <div className="d-flex  flex-wrap pt-2">
+                    {
+                        reviews.map(review => <ReviewCard review={review}></ReviewCard>)
+                    }
+                </div>
             </div>
         </div>
     );

@@ -5,3 +5,13 @@
     height: 200px;
     padding-top: 20px;
 }
+.features-card{
+    opacity: 0.8;
+    transition: all 600ms;
+    cursor: pointer;
+}
+.features-card:hover{
+    opacity: 1;
+    background-color: rgba(0, 255, 255, 0.397);
+    color: rgb(185, 47, 47);
+}

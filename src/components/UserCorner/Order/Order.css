@@ -12,3 +12,11 @@
 .error{
     color: red;
 }
+.bg-order{
+    background-color: cornflowerblue;
+    height: 500px;
+    border-radius: 10px;
+}
+.order-container{
+    background: #caf0f8;
+}

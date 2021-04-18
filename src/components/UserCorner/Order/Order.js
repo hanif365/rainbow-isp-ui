@@ -8,22 +8,16 @@ import Navbar from '../../Shared/Navbar/Navbar';
 import moment from 'moment';
 import OrderList from '../OrderList/OrderList';
 import Review from '../Review/Review';
+import Footer from '../../Shared/Footer/Footer';
 
 const Order = () => {
     const { register, handleSubmit, watch, errors } = useForm();
-    // const onSubmit = data => console.log(data);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
     const [shippingData, setShippingData] = useState(null);
-
     const [orders, setOrders] = useState([])
-
     const [showOrderList, setShowOrderList] = useState(false);
-
     const [showReview, setShowReview] = useState(false);
 
-
-    // console.log(props)
     console.log(loggedInUser)
     const { serviceId } = useParams();
     console.log(serviceId);
@@ -35,16 +29,9 @@ const Order = () => {
         fetch(`https://polar-bastion-39307.herokuapp.com/service/${serviceId}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data[0])
-                console.log(data)
-                console.log(data[0].Price)
-                // console.log(data[0].Product_Name)
                 setService(data[0])
             })
     }, [])
-
-
-    // For add Order
 
     const onSubmit = data => {
         setShippingData(data);
@@ -52,10 +39,8 @@ const Order = () => {
     };
 
     const handlePaymentSuccess = payment => {
-        // const savedCart = getDatabaseCart();
         const orderDetails = {
             ...loggedInUser,
-            //   products: savedCart, 
             shipment: shippingData,
             payment,
             orderTime: moment().format('MMMM Do YYYY, h:mm:ss a')
@@ -74,20 +59,10 @@ const Order = () => {
                 console.log('server side response', res)
                 // window.location.reload(false)
             })
-        // .then(res => res.json())
-        // // .then(data => {
-        // //     if (data) {
-        // //         //   processOrder();
-        // //         // alert('your order placed successfully');
-        // //     }
-        // // })
+        
 
-        // window.location.reload(false)
+        window.location.reload(false)
     }
-
-    // New test code
-
-
 
     const handleReview = () => {
         console.log("order clicked");
@@ -136,18 +111,12 @@ const Order = () => {
     // }, [])
 
     return (
-        <div>
+        <div className="order-container">
             <Navbar></Navbar>
             <div className="container-fluid py-5 my-5">
-                {/* <h1>This is order Page</h1>
-            <p>Price {service.Price}</p>
-            <p>{loggedInUser.name}</p>
-            <p>{loggedInUser.email}</p> */}
-
-
                 <div className="row">
                     <div className="col-md-3">
-                        <div className="d-flex flex-column bg-success p-3">
+                        <div className="d-flex flex-column bg-order p-3">
                             <button onClick={handleOrder} className="btn btn-info py-3" >Order</button>
                             <button onClick={handleOrderList} className="btn btn-info my-4 py-3">Order list</button>
                             <button onClick={handleReview} className="btn btn-info py-3" >Add Review</button>
@@ -194,8 +163,7 @@ const Order = () => {
 
 
                         <div style={{ display: showOrderList ? 'block' : 'none' }} className="">
-                            <p>Icon add korbo</p>
-                            <h2 className="text-center">Your Order List</h2>
+                            {loggedInUser.email && <h2 className="text-center">Your Order List</h2>}
                             <div className="d-flex flex-wrap justify-align-center">
                                 {
                                     orders.map(order => <OrderList order={order}></OrderList>)
@@ -211,6 +179,7 @@ const Order = () => {
 
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

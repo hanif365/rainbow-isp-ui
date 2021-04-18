@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from '../../Shared/Navbar/Navbar';
 import { UserContext } from '../../../App';
+import Footer from '../../Shared/Footer/Footer';
 
 const Admin = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -144,11 +145,11 @@ const Admin = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="container-fluid py-5 my-5">
+            <div className="container-fluid py-5 my-5 admin-container">
                 <div className="row">
 
-                    <div className="col-md-3 ">
-                        <div className="bg-success d-flex flex-column p-3">
+                    <div className="col-md-3 bg-order">
+                        <div className=" d-flex flex-column p-3">
                             <button className="btn btn-info py-3" onClick={() => { setShowOrder(true); setShowAddService(false); setShowManageService(false); setShowMakeAdmin(false) }} >Order List</button>
                             <button className="btn btn-info py-3  my-4" onClick={() => { setShowOrder(false); setShowAddService(true); setShowManageService(false); setShowMakeAdmin(false)}}>Add Service</button>
                             <button className="btn btn-info py-3 mb-4" onClick={() => { setShowOrder(false); setShowAddService(false); setShowManageService(false); setShowMakeAdmin(true) }}>Make Admin</button>
@@ -158,11 +159,7 @@ const Admin = () => {
 
                     <div className="col-md-9">
                         {showOrder && <div className="">
-                            {/* {
-                            orders.map(order => <OrderDetails order={order}></OrderDetails>)
-                        } */}
-
-
+                           
                             <table className="table table-borderless table-striped table-hover table-success">
                                 <thead>
                                     <tr>
@@ -170,11 +167,11 @@ const Admin = () => {
                                         <th className="text-secondary" scope="col">Name</th>
                                         <th className="text-secondary" scope="col">EmailID</th>
                                         <th className="text-secondary" scope="col">ServiceName</th>
-                                        <th className="text-secondary" scope="col">PayWith</th>
+                                        {/* <th className="text-secondary" scope="col">PayWith</th> */}
                                         {/* <th className="text-secondary" scope="col">Validation</th> */}
                                         <th className="text-secondary" scope="col">Description</th>
                                         <th className="text-secondary" scope="col">OrderDate</th>
-                                        <th className="text-secondary" scope="col">Phone</th>
+                                        {/* <th className="text-secondary" scope="col">Phone</th> */}
                                         <th className="text-secondary" scope="col">Status</th>
                                     </tr>
                                 </thead>
@@ -187,11 +184,11 @@ const Admin = () => {
                                                 <td>{order.name}</td>
                                                 <td>{order.email}</td>
                                                 <td>{order.shipment.Service_Name}</td>
-                                                <td>{order.payment.card?.funding}card</td>
+                                                {/* <td>{order.payment.card?.funding}card</td> */}
                                                 {/* <td>{order.payment.card?.exp_year}</td> */}
                                                 <td>{order.shipment.Service_Description}card</td>
                                                 <td>{order.orderTime}</td>
-                                                <td>{order.shipment.phone}</td>
+                                                {/* <td>{order.shipment.phone}</td> */}
                                                 <td>
                                                     <select name="orders" id="orders">
                                                         <option value="pending">Pending</option>
@@ -208,7 +205,7 @@ const Admin = () => {
                         </div>}
 
 
-                        {showAddService && <div>
+                        {showAddService && <div className="order-component">
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -230,7 +227,7 @@ const Admin = () => {
                         </div>
                         }
 
-                        {showMakeAdmin && <div className="my-3">
+                        {showMakeAdmin && <div className="my-3 order-component">
                             <form onSubmit={handleSubmit(onSubmitAdmin)}>
                                 <div className="row">
                                     <div className="col">
@@ -244,11 +241,6 @@ const Admin = () => {
 
 
                         {showManageService && <div className="">
-                            {/* {
-                            services.map(service => <ManageServices service={service}></ManageServices>)
-                        } */}
-
-
 
                             <table className="table table-borderless table-striped table-hover table-info">
                                 <thead>
@@ -287,6 +279,7 @@ const Admin = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

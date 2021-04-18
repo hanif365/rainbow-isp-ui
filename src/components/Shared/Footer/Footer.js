@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from '../../../images/logo.png'
 import './Footer.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
     return (
@@ -13,9 +15,9 @@ const Footer = () => {
                             <h2 className="align-self-center ms-2">Rainbow ISP</h2>
                         </div>
                         
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nobis.</p>
+                        <h6 className="py-2">We Provide World Class service with reasonable price</h6>
                     </div>
-                    <div className="col-md-3 col-sm-6 link d-flex flex-column">
+                    <div className="col-md-3 col-sm-6 link d-flex flex-column footer-link">
                         <h2>Quick Links</h2>
                         <a href="#">About Us</a>
                         <a href="#">Services</a>
@@ -43,9 +45,13 @@ const Footer = () => {
                 <div className="row">
                     <div className="col">
                         <hr/>
-                        <p>Copyright @ {(new Date()).getFullYear()} Rainbow ISP - All rights reserved</p>
+                        <p>Copyright @ {(new Date()).getFullYear()} <span className="text-colorful">Rainbow ISP</span> - All rights reserved</p>
                     </div>
                 </div>
+            </div>
+
+            <div>
+                <a href="#" className="bottom-to-top"><FontAwesomeIcon icon={faArrowUp} size="2x" /></a>
             </div>
         </footer>
     );

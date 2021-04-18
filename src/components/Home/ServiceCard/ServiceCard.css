@@ -1,13 +1,20 @@
 .service-card{
     max-width: 500px;
+    cursor: pointer;
+    transition: all 700ms;
     /* height: 250px; */
+}
+.service-card:hover .service-card-img{
+    width: 150px;
+    height: 150px;
+    transition: all 800ms;
 }
 .service-card-img{
     width: 200px;
     height: 200px;
 }
-.service-card:hover .service-info{
-    color: #fff;
+.service-card:hover{
+    color: rgb(132, 158, 15);
     background-color: aquamarine;
     /* border-radius: 20px 0 0 20px; */
 }

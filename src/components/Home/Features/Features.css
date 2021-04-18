@@ -1,0 +1,14 @@
+.feature-logo{
+    width: 80px;
+    height: 80px;
+    padding: 10px 0;
+}
+.feature-container{
+    background: url('../../../images/bg-service.png');
+    background-position: center;
+    /* background-size: cover; */
+    background-color: bisque;
+}
+.text-colorful{
+    color: coral;
+}

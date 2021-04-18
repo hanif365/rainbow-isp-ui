@@ -8,15 +8,6 @@ const OrderList = (props) => {
 
     return (
         <div>
-            {/* <h1>I am orderlist</h1> */}
-            {/* <h4>{props.order?.shipment?.Service_Name}</h4>
-            <h4>{props.order?.shipment?.Service_Description}</h4>
-            <img src={props.order?.shipment?.ServiceImg} alt=""/>
-            <p>Expaire: {props.order?.payment?.card?.exp_year}</p>
-            <p>Expaire: {props.order?.payment?.card?.exp_month}</p>
-            <p>Expaire: {props.order?.payment?.card?.country}</p>
-            <p>Expaire: {props.order?.payment?.card?.last4}</p> */}
-
             <div class="card orderlist-card m-3">
                 <img src={props.order?.shipment?.ServiceImg} class="card-img-top orderlist-img" alt="orderImg" />
                 <div class="card-body">

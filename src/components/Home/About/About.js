@@ -2,27 +2,28 @@ import React from 'react';
 import './About.css'
 
 import featuresImg from '../../../images/features-img.png'
+import featuresImgFtp from '../../../images/ftp.png'
 
 const About = () => {
     return (
         <section className="container py-5">
             <div className="row d-flex">
                 <div className="col-md-7 align-self-center">
-                    <h2>About Rainbow ISP</h2>
+                    <h2><span className="text-colorful">About</span> Rainbow ISP</h2>
                     <h3>Discover A Wider World Of Recreation</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At aspernatur voluptate ipsam a vel vero architecto perferendis! Fugiat, praesentium quisquam.</p>
+                    <h6 className="text-secondary">Powerful SFTP file Server with NEW Web Interface. You can access all Files using a web browser & feel free to request your files.</h6>
                     <hr/>
                     <div className="row d-flex">
                         <div className="col-md-6">
                             <img src={featuresImg} className="img-fluid" alt=""/>
                         </div>
                         <div className="col-md-6 align-self-center">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad inventore laborum unde aliquid ullam deleniti.</p>
+                            <h6 className="text-secondary">No matter where you’re located, High-Speed Internet has your back with fast speeds and reliable service.</h6>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-5">
-                    <img src={featuresImg} className="img-fluid" alt="features-image"/>
+                    <img src={featuresImgFtp} className="img-fluid" alt="features-image"/>
                 </div>
             </div>
         </section>

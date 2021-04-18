@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const HeaderContent = () => {
     return (
-        <main className="d-flex align-items-center header-container py-5 my-5">
+        <main className="d-flex align-items-center header-container py-5 mt-5">
             <div className="col-md-5 offset-md-1 main-content">
                 <h1>Connect the world with RainbowISP</h1>
                 <h5 className="py-3">We Provide WorldClass Internet Service With Reasonable Price</h5>

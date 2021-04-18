@@ -80,35 +80,13 @@ const Order = () => {
         setShowReview(false);
     }
 
-// test code
-    // useEffect(() => {
-    //     fetch(`https://polar-bastion-39307.herokuapp.com/orders`)
-    //         .then(res => res.json())
-    //         .then(data => setOrders(data))
-    // }, [])
-
-    // working code
-    // useEffect(() => {
-    //     fetch(`https://polar-bastion-39307.herokuapp.com/orders?email=`+loggedInUser.email)
-    //         .then(res => res.json())
-    //         .then(data => setOrders(data))
-    // }, [])
-
-    // test code
+   
     useEffect(() => {
         fetch(`https://polar-bastion-39307.herokuapp.com/booking?email=`+loggedInUser.email)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
 
-
-
-
-    // useEffect(() => {
-    //     fetch('https://protected-temple-11347.herokuapp.com/products')
-    //         .then(res => res.json())
-    //         .then(data => setProducts(data))
-    // }, [])
 
     return (
         <div className="order-container">

@@ -36,9 +36,9 @@ function App() {
           <PrivateRoute path="/service/:serviceId">
             <Order></Order>
           </PrivateRoute>
-          <Route path="/order">
+          <PrivateRoute path="/order">
             <Order></Order>
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider >

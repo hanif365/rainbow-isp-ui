@@ -50,7 +50,7 @@ const Admin = () => {
 
     // new code
 
-    const onSubmitAdmin = (datalist) =>{
+    const onSubmitAdmin = (datalist) => {
         const adminData = {
             Admin_Name: datalist.Admin_Name,
             email: datalist.email,
@@ -106,20 +106,8 @@ const Admin = () => {
             })
     }, [])
 
-
-    // working old code not necessary now
-    // useEffect(() => {
-    //     fetch(`https://polar-bastion-39307.herokuapp.com/orders`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             setOrders(data);
-    //         })
-    // }, [])
-
-    // working code
     useEffect(() => {
-        fetch(`https://polar-bastion-39307.herokuapp.com/orders?email=`+loggedInUser.email)
+        fetch(`https://polar-bastion-39307.herokuapp.com/orders?email=` + loggedInUser.email)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -151,15 +139,15 @@ const Admin = () => {
                     <div className="col-md-3 bg-order">
                         <div className=" d-flex flex-column p-3">
                             <button className="btn btn-info py-3" onClick={() => { setShowOrder(true); setShowAddService(false); setShowManageService(false); setShowMakeAdmin(false) }} >Order List</button>
-                            <button className="btn btn-info py-3  my-4" onClick={() => { setShowOrder(false); setShowAddService(true); setShowManageService(false); setShowMakeAdmin(false)}}>Add Service</button>
+                            <button className="btn btn-info py-3  my-4" onClick={() => { setShowOrder(false); setShowAddService(true); setShowManageService(false); setShowMakeAdmin(false) }}>Add Service</button>
                             <button className="btn btn-info py-3 mb-4" onClick={() => { setShowOrder(false); setShowAddService(false); setShowManageService(false); setShowMakeAdmin(true) }}>Make Admin</button>
-                            <button className="btn btn-info py-3" onClick={() => { setShowOrder(false); setShowAddService(false); setShowManageService(true); setShowMakeAdmin(false)}}>Manage Services</button>
+                            <button className="btn btn-info py-3" onClick={() => { setShowOrder(false); setShowAddService(false); setShowManageService(true); setShowMakeAdmin(false) }}>Manage Services</button>
                         </div>
                     </div>
 
                     <div className="col-md-9">
                         {showOrder && <div className="">
-                           
+
                             <table className="table table-borderless table-striped table-hover table-success">
                                 <thead>
                                     <tr>
@@ -232,8 +220,8 @@ const Admin = () => {
                                 <div className="row">
                                     <div className="col">
                                         <input name="Admin_Name" className="form-control" placeholder="Add Admin Name" ref={register} />
-                                        <input name="email" className="form-control my-5" placeholder="Add Admin Email" ref={register} />  
-                                    </div>      
+                                        <input name="email" className="form-control my-5" placeholder="Add Admin Email" ref={register} />
+                                    </div>
                                 </div>
                                 <input className="btn btn-info ps-4 w-25" type="submit" />
                             </form>

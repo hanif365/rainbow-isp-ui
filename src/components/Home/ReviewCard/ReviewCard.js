@@ -19,7 +19,6 @@ const ReviewCard = (props) => {
                 <div class="py-3">
 
                     <p class="card-text">{Description}</p>
-                    {/* <p class="card-text">{Date}</p> */}
                 </div>
             </div>
         </div>

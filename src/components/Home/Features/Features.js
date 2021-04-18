@@ -29,7 +29,7 @@ const Features = () => {
         <div className="py-5 feature-container">
             <div className="container">
                 <div className="row col-12 text-center">
-                    <img src={featurelogo} className="feature-logo m-auto" alt=""/>
+                    <img src={featurelogo} className="feature-logo m-auto" alt="" />
                     <h4>Rainbow ISP <span className="text-colorful">Features</span></h4>
                     <h2 className="pb-3">We Are Internet Service Provider Company</h2>
                 </div>

@@ -1,9 +1,15 @@
 .review-card{
     max-width: 32rem;
+    transition: all 600ms;
+    cursor: pointer;
+}
+.review-card:hover{
+    background: #5f6aec;
+    color: #fff;
 }
 .review-card-img{
     height: 100px;
     width: 100px;
-    border: 2px solid red;
+    border: 2px solid rgb(146, 144, 144);
     border-radius: 50px;
 }

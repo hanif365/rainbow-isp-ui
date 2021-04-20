@@ -1,3 +1,12 @@
 .review-container{
     background: url('../../../images/bg-feature2.png');
 }
+.reviewLogo{
+    width: 80px;
+    height: 80px;
+    padding: 10px 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+}

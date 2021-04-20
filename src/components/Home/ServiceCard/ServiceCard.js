@@ -24,7 +24,7 @@ const ServiceCard = (props) => {
                             <p class="card-text">{Service_Description}</p>
                             <p>${Price} / month</p>
                             {/* <a href="#" class="btn btn-info w-50">ORDER NOW</a> */}
-                            <button onClick={() => handleService(_id)} className="btn btn-info px-5">ORDER NOW</button>
+                            <button onClick={() => handleService(_id)} className="btn  btn-colorful px-5">ORDER NOW</button>
                         </div>
                     </div>
                 </div>

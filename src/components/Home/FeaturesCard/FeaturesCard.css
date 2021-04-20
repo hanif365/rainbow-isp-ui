@@ -12,6 +12,6 @@
 }
 .features-card:hover{
     opacity: 1;
-    background-color: rgba(0, 255, 255, 0.397);
-    color: rgb(185, 47, 47);
+    background-color: #626eee;
+    color: #fff;
 }

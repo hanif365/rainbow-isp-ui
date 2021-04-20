@@ -2,11 +2,11 @@ import React from 'react';
 import './About.css'
 
 import featuresImg from '../../../images/features-img.png'
-import featuresImgFtp from '../../../images/ftp.png'
+import featuresImgFtp from '../../../images/about.png'
 
 const About = () => {
     return (
-        <section className="container py-5">
+        <section className="container py-5 px-3" id="about-section">
             <div className="row d-flex">
                 <div className="col-md-7 align-self-center">
                     <h2><span className="text-colorful">About</span> Rainbow ISP</h2>
@@ -23,7 +23,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-md-5">
-                    <img src={featuresImgFtp} className="img-fluid" alt="features-image" />
+                    <img src={featuresImgFtp} className="img-fluid feature-img" alt="features-image" />
                 </div>
             </div>
         </section>

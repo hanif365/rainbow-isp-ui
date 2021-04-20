@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReviewCard from '../ReviewCard/ReviewCard';
 import './ReviewHome.css'
-
+import reviewLogo from '../../../images/testimonial.png'
 const ReviewHome = () => {
     const [reviews, setReviews] = useState([])
 
@@ -14,8 +14,9 @@ const ReviewHome = () => {
             })
     }, [])
     return (
-        <div className="review-container">
+        <div className="review-container" id="review">
             <div className="container py-5 ">
+                <img src={reviewLogo} className="reviewLogo m-auto" alt="reviewLogo" />
                 <h4 className="text-center pb-2">Rainbow ISP <span className="text-colorful">Testimonial</span></h4>
                 <h2 className="text-center">What Our Clients Say</h2>
                 <div className="d-flex  flex-wrap pt-2">

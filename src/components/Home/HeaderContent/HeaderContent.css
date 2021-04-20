@@ -1,10 +1,12 @@
 .header-container{
-    height: 560px;
-    background: url('../../../images/bg-header.png');
-    background-color: rgb(215, 248, 250);
+    height: 620px;
+    /* background: url('../../../images/bg-header.png'); */
+    background-color: #2E39BF;
+    padding-top: 150px !important;
     /* background-color: #B9D5DC; */
 }
 .main-content{
+    margin-right: 50px !important;
     /* background: url('../../../images/bg-header.png'); */
 }
 .header-img{

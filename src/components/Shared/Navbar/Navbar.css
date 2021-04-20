@@ -1,24 +1,38 @@
 .navbar{
-    background-color: rgb(96, 233, 238);
-    height: 80px;
+    background-color: #2E39BF;
+    padding: 15px 0 !important;
 }
 .navbar-logo{
     width: 50px;
     height: 50px;
 }
+.btn-login{
+    background: #101fa7;
+}
 .nav-link{
     font-size: 20px;
     font-weight: 700;
     transition: all 800ms;
+    color: #fff !important;
 }
 .nav-link:hover{
-    color: #fff !important;
+    color: rgb(240, 225, 12) !important;
 }
 .navbar-brand{
     font-size: 24px;
     font-weight: 900;
     transition: all 800ms;
+    color: #65ac14 !important;
 }
 .navbar-brand:hover{
-    color: rgb(101, 172, 20) !important;
+    color: #fff !important;
+}
+.home{
+    color: #fff !important;
+}
+
+@media (max-width:767px){
+    .navbar-nav{
+        padding: 0 20px;
+    }
 }

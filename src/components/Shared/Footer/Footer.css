@@ -5,9 +5,12 @@
     font-weight: 700;
 
 }
+.link a:hover{
+    color: #fff;
+}
 .footer-container{
     /* background-color: aquamarine; */
-    background-color: #48cae4;
+    background-color: #5f6aec;
 }
 .footer-logo{
     width: 60px;
@@ -17,8 +20,8 @@
 .bottom-to-top {
     position: fixed;
     bottom: 20px;
-    right: 7px;
-    background: #12a6c7;
+    right: 10px;
+    background: #2E39BF;
     color: #fff;
     padding: 5px 8px;
     border-radius: 5px;
@@ -27,6 +30,6 @@
 }
 
 .bottom-to-top:hover {
-    background: #fd03dc;
+    background: #03d7fd;
     color: #fff;
 }

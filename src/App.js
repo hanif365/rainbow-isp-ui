@@ -11,6 +11,16 @@ import Admin from "./components/AdminPanel/Admin/Admin";
 import Order from "./components/UserCorner/Order/Order";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Login from "./components/Login/Login";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import OrderList from "./components/AdminPanel/OrderList/OrderList";
+import AddService from "./components/AdminPanel/AddService/AddService";
+import MakeAdmin from "./components/AdminPanel/MakeAdmin/MakeAdmin";
+import ManageService from "./components/AdminPanel/ManageService/ManageService";
+import Orders from "./components/UserCorner/Orders/Orders";
+import OrderLists from "./components/UserCorner/BookingLists/BookingLists";
+import Review from "./components/UserCorner/Review/Review";
+import BookingLists from "./components/UserCorner/BookingLists/BookingLists";
 
 
 export const UserContext = createContext()
@@ -27,18 +37,45 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <PrivateRoute path="/admin">
+          <Route path="/admin">
             <Admin></Admin>
+          </Route>
+          <PrivateRoute path="/dashboard">
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+          <Route path="/orderlist">
+            <OrderList></OrderList>
+          </Route>
+          <Route path="/addservice">
+            <AddService></AddService>
+          </Route>
+          <Route path="/makeadmin">
+            <MakeAdmin></MakeAdmin>
+          </Route>
+          <PrivateRoute path="/manageservices">
+            <ManageService></ManageService>
           </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
+          {/* <PrivateRoute path="/service/:serviceId">
+            <Order></Order>
+          </PrivateRoute> */}
           <PrivateRoute path="/service/:serviceId">
-            <Order></Order>
+            <Orders></Orders>
           </PrivateRoute>
-          <PrivateRoute path="/order">
+          {/* <Route path="/order">
             <Order></Order>
+          </Route> */}
+          <PrivateRoute path="/orders">
+            <Orders></Orders>
           </PrivateRoute>
+          <Route path="/bookinglists">
+            <BookingLists></BookingLists>
+          </Route>
+          <Route path="/addreview">
+            <Review></Review>
+          </Route>
         </Switch>
       </Router>
     </UserContext.Provider >

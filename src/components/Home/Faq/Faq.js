@@ -5,7 +5,7 @@ import faq from '../../../images/faq.jpg'
 
 const Faq = () => {
     return (
-        <section className="container py-5">
+        <section className="container py-5 px-3" id="faq-section">
             <div className="row">
                 <h2>Useful <span className="text-colorful">FAQ’s</span></h2>
                 <div className="col-md-7">

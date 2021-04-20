@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import Sidebar from '../../Sidebar/Sidebar';
 import './Review.css'
 
 const Review = () => {
@@ -31,7 +32,7 @@ const Review = () => {
         })
             .then(res => {
                 console.log('server side response', res)
-                window.location.reload(false)
+                // window.location.reload(false)
             })
 
     };
@@ -54,30 +55,33 @@ const Review = () => {
             });
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="row">
-                    <div className="col-md-6">
-                        <input name="Name" className="my-5 form-control" placeholder="Your Name" ref={register} />
+        <section className="container-fluid row">
+            <Sidebar></Sidebar>
+            <div className="col-9 p-4 pr-5 py-5 my-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <input name="Name" className="my-5 form-control" placeholder="Your Name" ref={register} />
 
-                        <input name="Designation" className="my-5 form-control" placeholder="Your Designation" ref={register} />
+                            <input name="Designation" className="my-5 form-control" placeholder="Your Designation" ref={register} />
 
-                        <input name="JobPlace" className="my-5 form-control" placeholder="Your JobPlace" ref={register} />
+                            <input name="JobPlace" className="my-5 form-control" placeholder="Your JobPlace" ref={register} />
 
 
+                        </div>
+                        <div className="col-md-6">
+                            <input name="imageURL" className="my-5 form-control" type="file" onChange={handleImgUpload} />
+
+                            <input name="Description" className=" form-control" placeholder="Description" ref={register} />
+
+                        </div>
                     </div>
-                    <div className="col-md-6">
-                        <input name="imageURL" className="my-5 form-control" type="file" onChange={handleImgUpload} />
-
-                        <input name="Description" className=" form-control" placeholder="Description" ref={register} />
-
-                    </div>
-                </div>
 
 
-                <input className="my-5  btn btn-info ps-4" type="submit" />
-            </form>
-        </div>
+                    <input className="my-5  btn btn-info ps-4" type="submit" />
+                </form>
+            </div>
+        </section>
     );
 };
 

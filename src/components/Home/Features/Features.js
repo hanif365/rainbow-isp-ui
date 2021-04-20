@@ -26,7 +26,7 @@ const Features = () => {
         }
     ]
     return (
-        <div className="py-5 feature-container">
+        <div className="py-5 feature-container" id="feature-section">
             <div className="container">
                 <div className="row col-12 text-center">
                     <img src={featurelogo} className="feature-logo m-auto" alt="" />

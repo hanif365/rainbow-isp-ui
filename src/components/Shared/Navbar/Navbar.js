@@ -25,9 +25,11 @@ const Navbar = () => {
                         <div class="navbar-nav ms-auto">
                             <Link to="/home" class="nav-link active home" aria-current="page">HOME</Link>
                             {/* <Link to="/about" class="nav-link">ABOUT</Link> */}
-                            <Link to="/dashboard" class="nav-link">DASHBOARD</Link>
+                            
                             {!loggedInUser.email && <a href="#service-section" class="nav-link">SERVICES</a>}
                             {!loggedInUser.email && <a href="#contact-section" class="nav-link">CONTACT</a>}
+
+                            <Link to="/dashboard" class="nav-link">DASHBOARD</Link>
                             {/* <Link to="/login" class="nav-link">LOGIN</Link> */}
                             {
                                 loggedInUser.email ? <Link className="nav-link" id="user-name">{loggedInUser.name}</Link> : <Link to="/login" className="nav-link btn btn-login px-5">LOG IN</Link>

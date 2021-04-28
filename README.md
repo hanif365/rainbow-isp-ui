@@ -9,6 +9,6 @@ Project Features:
 
 (3) An admin can show all order list manage service and create a new admin also.
 
-(4) An user can show his or her order only and make a order very easily
+(4) An user can show his or her order only and make a order very easily!
 
 Project Live Link : https://rainbow-isp.web.app/

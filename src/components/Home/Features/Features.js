@@ -34,7 +34,7 @@ const Features = () => {
                     <h2 className="pb-3">We Are Internet Service Provider Company</h2>
                 </div>
             </div>
-            <div className="row d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
                 {
                     featuresData.map(features => <FeaturesCard features={features}></FeaturesCard>)
                 }

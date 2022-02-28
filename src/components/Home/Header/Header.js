@@ -4,7 +4,7 @@ import HeaderContent from '../HeaderContent/HeaderContent';
 
 const Header = () => {
     return (
-        <div>
+        <div className='container-fluid'>
             <Navbar></Navbar>
             <HeaderContent></HeaderContent>
         </div>

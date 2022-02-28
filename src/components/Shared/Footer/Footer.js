@@ -47,7 +47,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col">
                         <hr/>
-                        <p>Copyright @ {(new Date()).getFullYear()} <span className="text-light">Rainbow ISP</span> - All rights reserved</p>
+                        <p>&copy; {(new Date()).getFullYear()} <span className="text-light">Rainbow ISP</span> - All rights reserved</p>
                     </div>
                 </div>
             </div>
